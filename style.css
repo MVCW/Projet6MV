@@ -11,3 +11,99 @@ Updated: 2024-07-16 10:56:55
 
 */
 
+/* Appliquer la police Syne aux labels */
+.wpcf7 label {
+    color: #000; /* Couleur du texte */
+    font-family: 'Syne', sans-serif !important; /* Police de caractères avec importance pour surmonter les conflits */
+    font-size: 20px; /* Taille de la police */
+    font-style: normal; /* Style de la police */
+    font-weight: 400; /* Épaisseur de la police */
+    line-height: normal; /* Hauteur de ligne */
+    margin-bottom: 10px; /* Espacement inférieur */
+}
+
+/* Styles pour les champs de texte (nom et e-mail) */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+    position: relative;
+    border: 1px solid #ccc; /* Ajoutez une bordure */
+    outline: none; /* Supprimer les contours */
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04); /* Ombre */
+    border-radius: 7px; /* Arrondi des coins */
+    padding: 10px; /* Espacement intérieur */
+    width: 100%; /* Largeur */
+    height: 71px; /* Hauteur spécifique pour les champs de nom et e-mail */
+    font-family: 'Syne', sans-serif !important; /* Police de caractères */
+    font-size: 20px; /* Taille de la police */
+    font-style: normal; /* Style de la police */
+    font-weight: 400; /* Épaisseur de la police */
+    line-height: normal; /* Hauteur de ligne */
+    background: #fff; /* Fond blanc */
+}
+
+/* Styles pour la zone de message */
+.wpcf7 textarea {
+    position: relative;
+    border: 1px solid #ccc; /* Ajoutez une bordure */
+    outline: none; /* Supprimer les contours */
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04); /* Ombre */
+    border-radius: 7px; /* Arrondi des coins */
+    padding: 10px; /* Espacement intérieur */
+    width: 100%; /* Largeur */
+    height: 237px; /* Hauteur spécifique pour le message */
+    font-family: 'Syne', sans-serif !important; /* Police de caractères */
+    font-size: 20px; /* Taille de la police */
+    font-style: normal; /* Style de la police */
+    font-weight: 400; /* Épaisseur de la police */
+    line-height: normal; /* Hauteur de ligne */
+    background: #fff; /* Fond blanc */
+    resize: none; /* Désactiver le redimensionnement */
+}
+
+
+
+/* Centrer le bouton "Envoyer" */
+.wpcf7 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tous les éléments du formulaire horizontalement */
+
+}
+
+/* Styles pour le bouton "Envoyer" */
+.wpcf7 input[type="submit"] {
+    width: 198px;
+    height: 55px;
+    padding: 9px 0;
+    border-radius: 5px;
+    background: #E0B9B4;
+    color: white; /* Couleur du texte sur le bouton */
+    font-family: 'Syne', sans-serif !important; /* Police de caractères */
+    font-size: 15px; /* Taille de la police */
+    font-style: normal; /* Style de la police */
+    font-weight: 400; /* Épaisseur de la police */
+    line-height: normal; /* Hauteur de ligne */
+    border: none; /* Enlever la bordure */
+    cursor: pointer; /* Ajouter un pointeur lors du survol */
+    margin-top: 15px; /* Espacement supérieur pour séparer du champ précédent */
+}
+
+.wpcf7 input[type="submit"]:hover {
+    background: #C02E44; /* Couleur de fond au survol */
+}
+
+/* Réinitialisation des styles de formulaire */
+.wpcf7 {
+    margin: 0;
+    padding: 0;
+}
+
+.wpcf7 form {
+    margin: 0;
+    padding: 0;
+}
+
+.wpcf7 input[type="submit"] {
+    display: block; /* Assurer que le bouton est un bloc */
+    margin: 0 auto; /* Centre le bouton horizontalement */
+}
