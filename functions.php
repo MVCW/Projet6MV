@@ -22,3 +22,26 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+
+
+// S'assurer que le fichier est appelé depuis WordPress
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+
+// Fonction pour ajouter un lien "Admin" dans le menu si l'utilisateur est connecté et est un administrateur
+function ajouter_lien_admin_au_menu_personnalise($items, $args) {
+    // Vérifie si l'utilisateur est connecté et est un administrateur
+    if (is_user_logged_in() && current_user_can('administrator')) {
+        // Ajoute un lien "Admin" dans le menu
+        $items .= '<li class="menu-item"><a class="hfe-menu-item" href="' . admin_url() . '">Admin</a></li>';
+    }
+    return $items;
+}
+
+// Utilise le hook wp_nav_menu_items pour modifier le menu
+add_filter('wp_nav_menu_items', 'ajouter_lien_admin_au_menu_personnalise', 10, 2);
+?>
+
+
