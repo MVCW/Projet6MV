@@ -113,7 +113,7 @@ Updated: 2024-07-16 10:56:55
         display: flex;
         justify-content: center; /* Centre le formulaire horizontalement */
         align-items: center; /* Centre le formulaire verticalement */
-        background-color: #f0f0f0; /* Couleur de fond de la page */
+        background-color: #ffffff; /* Couleur de fond de la page */
         margin: 0; /* Supprimer les marges par défaut */
     }
 
@@ -129,7 +129,7 @@ Updated: 2024-07-16 10:56:55
     
     /* Styles généraux pour le formulaire et le texte */
     body, input {
-        color: #000;
+        color: #000000;
         font-family: 'Inter', sans-serif;
         font-size: 16px;
         font-style: normal;
@@ -162,208 +162,97 @@ Updated: 2024-07-16 10:56:55
     }
 /* Conteneur principal du formulaire */
 .custom-wrapper {
-    background-color: #3B8E46; /* Couleur de fond du formulaire */
-    padding: 20px; /* Espacement intérieur du formulaire */
+    background-color: transparent; /* Fond transparent pour le formulaire */
+    padding: 0px; /* Espacement intérieur du formulaire */
     border-radius: 8px; /* Coins arrondis pour le formulaire (optionnel) */
     display: flex; /* Utilise flexbox pour aligner les colonnes et le bouton */
     flex-direction: column; /* Dispose les colonnes et le bouton de soumission verticalement */
     min-height: 400px; /* Hauteur minimale pour le conteneur */
+    width: 100%; /* Largeur maximale du formulaire */
+    max-width: 1200px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
 }
 
 /* Conteneur des colonnes du formulaire */
 .custom-columns {
     display: flex; /* Aligne les colonnes côte à côte */
-    gap: 89px; /* Espacement entre les colonnes */
+    gap: 0 50px; /* Espacement entre les colonnes */
     flex: 1; /* Permet aux colonnes de remplir l'espace disponible */
-    position: relative; /* Nécessaire pour la ligne de séparation */
+    position: relative; /* Nécessaire pour la ligne de séparation */ 
+    box-sizing: border-box;
+    margin-bottom: 0; /* Supprime la marge en bas des colonnes */
 }
 
-/* Colonnes du formulaire */
+/* Chaque colonne prend la moitié de l'espace disponible */
 .custom-column {
-    flex: 1; /* Les colonnes se partagent l'espace disponible */
-    background-color: #fff; /* Fond blanc pour les champs */
-    padding: 15px; /* Espacement intérieur des colonnes */
+    flex: 1; /* Chaque colonne occupe une part égale de l'espace disponible */
+    padding: 0; /* Espacement horizontal interne pour les colonnes */
     box-sizing: border-box;
+    margin-bottom: 0; /* Supprime la marge en bas des colonnes */
+}
+
+/* Colonne gauche alignée à gauche */
+.custom-column.left {
+    margin-right: 0; /* Pas de marge à droite pour la colonne gauche */
+}
+
+/* Colonne droite alignée à droite */
+.custom-column.right {
+    margin-left: 0; /* Pas de marge à gauche pour la colonne droite */
 }
 
 /* Titres des colonnes */
 .column-title {
-    color: #FFF; /* Couleur du texte des titres */
+    color: #ffffff; /* Couleur du texte des titres */
     font-family: Syne, sans-serif; /* Police des titres */
     font-size: 30px; /* Taille de la police */
     font-style: normal; /* Style de la police */
     font-weight: 700; /* Poids de la police */
     line-height: normal; /* Hauteur de ligne */
-    margin-bottom: 20px; /* Espacement sous le titre */
+    margin-bottom: 10px; /* Espacement sous le titre */
 }
 
 /* Ligne de séparation entre les colonnes */
 .custom-separator {
     width: 1px; /* Largeur de la ligne de séparation */
     background-color: #fff; /* Couleur de la ligne (blanc) */
-    height: 100%; /* Hauteur automatique pour s'ajuster aux colonnes */
+    height: 447px; /* Hauteur automatique pour s'ajuster aux colonnes */
     position: absolute; /* Positionne la ligne de séparation */
     top: 0; /* Aligne la ligne en haut du conteneur */
-    left: calc(50% - 0.5px); /* Centre la ligne de séparation au milieu des colonnes */
+    bottom: 0;
+    left: 50%; /* Centre la ligne au milieu des colonnes */
+    transform: translateX(-50%); /* Ajuste le positionnement de la ligne pour la centrer correctement */
 }
 
 /* Conteneur du bouton de soumission */
 .custom-submit {
     text-align: center; /* Centre le bouton horizontalement */
-    margin-top: 30px; /* Espacement au-dessus du bouton */
+    margin-top: 20px; /* Espacement au-dessus du bouton */
 }
 
 /* Style du bouton de soumission */
 .custom-submit input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #0073e6; /* Couleur de fond du bouton */
-    color: /* Conteneur principal du formulaire */
-    .custom-wrapper {
-        background-color: #3B8E46; /* Couleur de fond du formulaire */
-        padding: 20px; /* Espacement intérieur du formulaire */
-        border-radius: 8px; /* Coins arrondis pour le formulaire (optionnel) */
-        display: flex; /* Utilise flexbox pour aligner les colonnes et le bouton */
-        flex-direction: column; /* Dispose les colonnes et le bouton de soumission verticalement */
-        min-height: 400px; /* Hauteur minimale pour le conteneur */
-    }
-    
-    /* Conteneur des colonnes du formulaire */
-    .custom-columns {
-        display: flex; /* Aligne les colonnes côte à côte */
-        gap: 89px; /* Espacement entre les colonnes */
-        flex: 1; /* Permet aux colonnes de remplir l'espace disponible */
-        position: relative; /* Nécessaire pour la ligne de séparation */
-    }
-    
-    /* Colonnes du formulaire */
-    .custom-column {
-        flex: 1; /* Les colonnes se partagent l'espace disponible */
-        background-color: #fff; /* Fond blanc pour les champs */
-        padding: 15px; /* Espacement intérieur des colonnes */
-        box-sizing: border-box;
-    }
-    
-    /* Titres des colonnes */
-    .column-title {
-        color: #/* Conteneur principal du formulaire */
-        .custom-wrapper {
-            background-color: #3B8E46; /* Couleur de fond du formulaire */
-            padding: 20px; /* Espacement intérieur du formulaire */
-            border-radius: 8px; /* Coins arrondis pour le formulaire (optionnel) */
-            display: flex; /* Utilise flexbox pour aligner les colonnes et le bouton */
-            flex-direction: column; /* Dispose les colonnes et le bouton de soumission verticalement */
-            min-height: 400px; /* Hauteur minimale pour le conteneur */
-        }
-        
-        /* Conteneur des colonnes du formulaire */
-        .custom-columns {
-            display: flex; /* Aligne les colonnes côte à côte */
-            gap: 89px; /* Espacement entre les colonnes */
-            flex: 1; /* Permet aux colonnes de remplir l'espace disponible */
-            position: relative; /* Nécessaire pour la ligne de séparation */
-        }
-        
-        /* Colonnes du formulaire */
-        .custom-column {
-            flex: 1; /* Les colonnes se partagent l'espace disponible */
-            background: red; /* Fond blanc pour les champs */
-            padding: 15px; /* Espacement intérieur des colonnes */
-            box-sizing: border-box;
-        }
-        
-        /* Titres des colonnes */
-        .column-title {
-            color: #000; /* Couleur du texte des titres */
-            font-family: Syne, sans-serif; /* Police des titres */
-            font-size: 30px; /* Taille de la police */
-            font-style: normal; /* Style de la police */
-            font-weight: 700; /* Poids de la police */
-            line-height: normal; /* Hauteur de ligne */
-            margin-bottom: 40px; /* Espacement sous le titre */
-        }
-        
-        /* Ligne de séparation entre les colonnes */
-        .custom-separator {
-            width: 1px; /* Largeur de la ligne de séparation */
-            background-color: #fff; /* Couleur de la ligne (blanc) */
-            height: 100%; /* Hauteur automatique pour s'ajuster aux colonnes */
-            position: absolute; /* Positionne la ligne de séparation */
-            top: 0; /* Aligne la ligne en haut du conteneur */
-            left: calc(50% - 0.5px); /* Centre la ligne de séparation au milieu des colonnes */
-        }
-        
-        /* Conteneur du bouton de soumission */
-        .custom-submit {
-            text-align: center; /* Centre le bouton horizontalement */
-            margin-top: 20px; /* Espacement au-dessus du bouton */
-        }
-        
-        /* Style du bouton de soumission */
-        .custom-submit input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #0073e6; /* Couleur de fond du bouton */
-            color: white; /* Couleur du texte */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        .custom-submit input[type="submit"]:hover {
-            background-color: #005bb5; /* Couleur de fond au survol */
-        }
-        
-        /* Assure une bonne disposition sur les petits écrans */
-        @media (max-width: 768px) {
-            .custom-columns {
-                flex-direction: column; /* Empile les colonnes verticalement sur petits écrans */
-                gap: 0; /* Supprime l'espacement entre les colonnes */
-            }
-        
-            .custom-separator {
-                display: none; /* Masque la ligne de séparation sur les petits écrans */
-            }
-        
-            .custom-submit {
-                margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
-            }
-        }FFF; /* Couleur du texte des titres */
-        font-family: Syne, sans-serif; /* Police des titres */
-        font-size: 30px; /* Taille de la police */
-        font-style: normal; /* Style de la police */
-        font-weight: 700; /* Poids de la police */
-        line-height: normal; /* Hauteur de ligne */
-        margin-bottom: 20px; /* Espacement sous le titre */
-    }
-    
-    /* Ligne de séparation entre les colonnes */
-    .custom-separator {
-        width: 1px; /* Largeur de la ligne de séparation */
-        background-color: #fff; /* Couleur de la ligne (blanc) */
-        height: 100%; /* Hauteur automatique pour s'ajuster aux colonnes */
-        position: absolute; /* Positionne la ligne de séparation */
-        top: 0; /* Aligne la ligne en haut du conteneur */
-        left: calc(50% - 0.5px); /* Centre la ligne de séparation au milieu des colonnes */
-    }
-    
-    /* Conteneur du bouton de soumission */
-    .custom-submit {
-        text-align: center; /* Centre le bouton horizontalement */
-        margin-top: 20px; /* Espacement au-dessus du bouton */
-    }
-    
-    /* Style du bouton de soumission */
-    .custom-submit input[type="submit"] {
         padding: 10px 20px;
-        background-color: #0073e6; /* Couleur de fond du bouton */
-        color: white; /* Couleur du texte */
+        background-color: #E0B9B4; /* Couleur de fond du bouton */
+        color: #fff; /* Couleur du texte */
         border: none;
         border-radius: 5px;
         cursor: pointer;
-    }
-    
-    .custom-submit input[type="submit"]:hover {
+}
+
+/* Style des champs de formulaire */
+input[type="text"], input[type="email"] {
+    width: 100%; /* Les champs prennent toute la largeur de la colonne */
+    padding: 10px; /* Padding pour les champs */
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 5px; /* Coins arrondis pour les champs */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur et la hauteur des champs */
+    margin-bottom: 10px; /* Espacement entre les champs */
+}
+
+.custom-submit input[type="submit"]:hover {
         background-color: #005bb5; /* Couleur de fond au survol */
-    }
+    } 
     
     /* Assure une bonne disposition sur les petits écrans */
     @media (max-width: 768px) {
@@ -378,30 +267,6 @@ Updated: 2024-07-16 10:56:55
     
         .custom-submit {
             margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
-        }
-    }; /* Couleur du texte */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.custom-submit input[type="submit"]:hover {
-    background-color: #005bb5; /* Couleur de fond au survol */
-}
-
-/* Assure une bonne disposition sur les petits écrans */
-@media (max-width: 768px) {
-    .custom-columns {
-        flex-direction: column; /* Empile les colonnes verticalement sur petits écrans */
-        gap: 0; /* Supprime l'espacement entre les colonnes */
-    }
-
-    .custom-separator {
-        display: none; /* Masque la ligne de séparation sur les petits écrans */
-    }
-
-    .custom-submit {
-        margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
-    }
+        } 
 }
 </style>
