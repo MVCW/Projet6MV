@@ -25,17 +25,27 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 
 
-// S'assurer que le fichier est appelé depuis WordPress
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
-
-// Fonction pour ajouter un lien "Admin" dans le menu si l'utilisateur est connecté et est un administrateur
+// Fonction pour ajouter un lien "Admin" au milieu du menu si l'utilisateur est connecté et est un administrateur
 function ajouter_lien_admin_au_menu_personnalise($items, $args) {
     // Vérifie si l'utilisateur est connecté et est un administrateur
     if (is_user_logged_in() && current_user_can('administrator')) {
-        // Ajoute un lien "Admin" dans le menu
-        $items .= '<li class="menu-item"><a class="hfe-menu-item" href="' . admin_url() . '">Admin</a></li>';
+        // Divise les éléments du menu en un tableau
+        $items_array = explode('</li>', $items);
+        
+        // Retire le dernier élément vide après le dernier </li>
+        array_pop($items_array);
+
+        // Calcule l'index au milieu du tableau
+        $milieu_index = ceil(count($items_array) / 2);
+
+        // Prépare le lien "Admin"
+        $admin_link = '<li class="menu-item"><a class="hfe-menu-item" href="' . admin_url() . '">Admin</a></li>';
+
+        // Insère le lien "Admin" au milieu du tableau
+        array_splice($items_array, $milieu_index, 0, $admin_link);
+
+        // Réunit les éléments du tableau en une chaîne
+        $items = implode('</li>', $items_array) . '</li>';
     }
     return $items;
 }
@@ -43,5 +53,4 @@ function ajouter_lien_admin_au_menu_personnalise($items, $args) {
 // Utilise le hook wp_nav_menu_items pour modifier le menu
 add_filter('wp_nav_menu_items', 'ajouter_lien_admin_au_menu_personnalise', 10, 2);
 ?>
-
 
