@@ -262,7 +262,7 @@ input[type="text"], input[type="email"] {
 }
 
 .custom-submit input[type="submit"]:hover {
-    background-color: #005bb5; /* Couleur de fond au survol */
+    background-color: #C02E44; /* Couleur de fond au survol */
 } 
 
 /* Assure une bonne disposition sur les petits écrans */
@@ -279,5 +279,58 @@ input[type="text"], input[type="email"] {
     .custom-submit {
         margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
     }
+}
+
+/* Importation de la police Syne depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+/* Style pour les liens de menu */
+.hfe-menu-item {
+    font-family: 'Syne', sans-serif; /* Police Syne */
+    font-size: 16px; /* Taille de la police */
+    font-style: normal; /* Style de la police */
+    line-height: normal; /* Hauteur de ligne normale */
+    text-align: center; /* Centrage du texte */
+    padding: 10px 15px; /* Espacement autour du texte */
+    text-decoration: none; /* Enlève la décoration du texte */
+    display: inline-block; /* Assure que le padding est appliqué correctement */
+    transition: all 0.3s ease; /* Transition pour les changements d'état */
+}
+
+/* Style pour le lien "Nous Rencontrer" */
+.nous-rencontrer-link a {
+    color: rgb(0, 0, 0); /* Couleur du texte par défaut */
+    background-color: rgb(255, 255, 255); /* Couleur de fond par défaut */
+}
+
+.nous-rencontrer-link a:hover {
+    color: #000000; /* Couleur du texte au survol */
+    background-color: rgb(255, 255, 255); /* Couleur de fond au survol */
+    font-weight: 700; /* Poids de la police au survol */
+}
+
+/* Style pour le lien "Admin" */
+.admin-link a {
+    color: rgb(0, 0, 0); /* Couleur du texte par défaut */
+    background-color: rgb(255, 255, 255); /* Couleur de fond par défaut */
+}
+
+.admin-link a:hover {
+    color: #000000; /* Couleur du texte au survol */
+    background-color: rgb(255, 255, 255); /* Couleur de fond au survol */
+    font-weight: 700; /* Poids de la police au survol */
+}
+
+/* Style pour le lien "Commander" */
+.commander-link a {
+    color: white; /* Couleur du texte par défaut */
+    background-color: pink; /* Couleur de fond par défaut */
+    font-weight: 700;
+}
+
+.commander-link a:hover {
+    color: white; /* Couleur du texte au survol */
+    background-color: #C02E44; /* Couleur de fond au survol */
+    font-weight: 700; /* Poids de la police au survol */
 }
 </style>

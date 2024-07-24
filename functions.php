@@ -39,7 +39,7 @@ function ajouter_lien_admin_au_menu_personnalise($items, $args) {
         $milieu_index = ceil(count($items_array) / 2);
 
         // Prépare le lien "Admin"
-        $admin_link = '<li class="menu-item"><a class="hfe-menu-item" href="' . admin_url() . '">Admin</a></li>';
+        $admin_link = '<li class="menu-item admin-link"><a class="hfe-menu-item" href="' . admin_url() . '">Admin</a></li>';
 
         // Insère le lien "Admin" au milieu du tableau
         array_splice($items_array, $milieu_index, 0, $admin_link);
@@ -47,10 +47,33 @@ function ajouter_lien_admin_au_menu_personnalise($items, $args) {
         // Réunit les éléments du tableau en une chaîne
         $items = implode('</li>', $items_array) . '</li>';
     }
+
+    // Ajout de classes spécifiques pour les autres liens
+    $items = str_replace('href="http://planty.local/nous-rencontrer"', 'class="hfe-menu-item nous-rencontrer-link" href="http://planty.local/nous-rencontrer"', $items);
+    $items = str_replace('href="http://planty.local/commander"', 'class="hfe-menu-item commander-link" href="http://planty.local/commander"', $items);
+    
     return $items;
 }
+
+// Fonction pour ajouter des classes CSS spécifiques aux éléments du menu
+function ajouter_classes_au_menu_personnalise($classes, $item, $args) {
+    // Ajoute des classes spécifiques aux liens du menu par titre
+    if ($item->title === 'Nous Rencontrer') {
+        $classes[] = 'nous-rencontrer-link';
+    } elseif ($item->title === 'Commander') {
+        $classes[] = 'commander-link';
+    } elseif ($item->title === 'Admin' && is_user_logged_in() && current_user_can('administrator')) {
+        $classes[] = 'admin-link';
+    }
+
+    return $classes;
+}
+
+// Utilise le hook 'nav_menu_css_class' pour ajouter des classes CSS spécifiques
+add_filter('nav_menu_css_class', 'ajouter_classes_au_menu_personnalise', 10, 3);
 
 // Utilise le hook wp_nav_menu_items pour modifier le menu
 add_filter('wp_nav_menu_items', 'ajouter_lien_admin_au_menu_personnalise', 10, 2);
 ?>
+
 
