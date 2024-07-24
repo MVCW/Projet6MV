@@ -324,7 +324,7 @@ input[type="text"], input[type="email"] {
 /* Style pour le lien "Commander" */
 .commander-link a {
     color: white; /* Couleur du texte par défaut */
-    background-color: pink; /* Couleur de fond par défaut */
+    background-color: #DC9F96; /* Couleur de fond par défaut */
     font-weight: 700;
 }
 
