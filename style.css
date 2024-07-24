@@ -13,13 +13,18 @@ Updated: 2024-07-16 10:56:55
 
 /* Appliquer la police Syne aux labels */
 .wpcf7 label {
-    color: #000; /* Couleur du texte */
+    color: #000; /* Couleur du texte noir pour le formulaire wpcf7 */
     font-family: 'Syne', sans-serif !important; /* Police de caractères avec importance pour surmonter les conflits */
     font-size: 20px; /* Taille de la police */
     font-style: normal; /* Style de la police */
     font-weight: 400; /* Épaisseur de la police */
     line-height: normal; /* Hauteur de ligne */
-    margin-bottom: 10px; /* Espacement inférieur */
+    margin-bottom: 13px; /* Espacement inférieur de 13px pour les labels */
+}
+
+/* Appliquer la couleur blanche aux labels dans custom-wrapper */
+.custom-wrapper label {
+    color: #fff; /* Couleur du texte blanc */
 }
 
 /* Styles pour les champs de texte (nom et e-mail) */
@@ -39,6 +44,7 @@ Updated: 2024-07-16 10:56:55
     font-weight: 400; /* Épaisseur de la police */
     line-height: normal; /* Hauteur de ligne */
     background: #fff; /* Fond blanc */
+    margin-top: 13px; /* Espacement supérieur de 13px pour les champs */
 }
 
 /* Styles pour la zone de message */
@@ -58,16 +64,14 @@ Updated: 2024-07-16 10:56:55
     line-height: normal; /* Hauteur de ligne */
     background: #fff; /* Fond blanc */
     resize: none; /* Désactiver le redimensionnement */
+    margin-top: 13px; /* Espacement supérieur de 13px pour les champs */
 }
-
-
 
 /* Centrer le bouton "Envoyer" */
 .wpcf7 form {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre tous les éléments du formulaire horizontalement */
-
 }
 
 /* Styles pour le bouton "Envoyer" */
@@ -108,58 +112,59 @@ Updated: 2024-07-16 10:56:55
     margin: 0 auto; /* Centre le bouton horizontalement */
 }
 
-     /* Style pour le conteneur du formulaire */
-     .form-container {
-        display: flex;
-        justify-content: center; /* Centre le formulaire horizontalement */
-        align-items: center; /* Centre le formulaire verticalement */
-        background-color: #ffffff; /* Couleur de fond de la page */
-        margin: 0; /* Supprimer les marges par défaut */
-    }
+/* Style pour le conteneur du formulaire */
+.form-container {
+    display: flex;
+    justify-content: center; /* Centre le formulaire horizontalement */
+    align-items: center; /* Centre le formulaire verticalement */
+    background-color: #ffffff; /* Couleur de fond de la page */
+    margin: 0; /* Supprimer les marges par défaut */
+}
 
-    /* Style du formulaire */
-    .form-item {
-        padding: 20px; /* Espacement interne */
-        background: #FFF; /* Fond blanc pour le formulaire */
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center; /* Centre le champ de saisie horizontalement */
-        align-items: center; /* Centre le champ de saisie verticalement */
-    }
-    
-    /* Styles généraux pour le formulaire et le texte */
-    body, input {
-        color: #000000;
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 0; /* Supprimer les marges par défaut */
-    }
+/* Style du formulaire */
+.form-item {
+    padding: 20px; /* Espacement interne */
+    background: #FFF; /* Fond blanc pour le formulaire */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centre le champ de saisie horizontalement */
+    align-items: center; /* Centre le champ de saisie verticalement */
+}
 
-    /* Style spécifique pour le champ de saisie */
-    input[type="number"] {
-        width: 39px; /* Largeur du champ de saisie */
-        height: 56px; /* Hauteur du champ de saisie */
-        padding: 0 10px; /* Espacement interne horizontal : 12px à droite */
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-        background-color: #FFF; /* Fond blanc pour le champ de saisie */
-        -moz-appearance: textfield; /* Pour Firefox */
-        text-align: center; /* Centre le texte horizontalement */
-        line-height: 56px; /* Centre le texte verticalement en utilisant la hauteur du champ */
-        /* Aligner le texte verticalement avec padding */
-        padding-right: 20px; /* Ajouter de l'espace supplémentaire à droite du texte */
-    }
+/* Styles généraux pour le formulaire et le texte */
+body, input {
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Supprimer les marges par défaut */
+}
 
-    /* Masquer les flèches pour les navigateurs WebKit (Chrome, Safari) */
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+/* Style spécifique pour le champ de saisie */
+input[type="number"] {
+    width: 39px; /* Largeur du champ de saisie */
+    height: 56px; /* Hauteur du champ de saisie */
+    padding: 0 10px; /* Espacement interne horizontal : 12px à droite */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #FFF; /* Fond blanc pour le champ de saisie */
+    -moz-appearance: textfield; /* Pour Firefox */
+    text-align: center; /* Centre le texte horizontalement */
+    line-height: 56px; /* Centre le texte verticalement en utilisant la hauteur du champ */
+    /* Aligner le texte verticalement avec padding */
+    padding-right: 20px; /* Ajouter de l'espace supplémentaire à droite du texte */
+}
+
+/* Masquer les flèches pour les navigateurs WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* Conteneur principal du formulaire */
 .custom-wrapper {
     background-color: transparent; /* Fond transparent pour le formulaire */
@@ -216,7 +221,7 @@ Updated: 2024-07-16 10:56:55
 .custom-separator {
     width: 1px; /* Largeur de la ligne de séparation */
     background-color: #fff; /* Couleur de la ligne (blanc) */
-    height: 447px; /* Hauteur automatique pour s'ajuster aux colonnes */
+    height: 94%; /* Hauteur automatique pour s'ajuster aux colonnes */
     position: absolute; /* Positionne la ligne de séparation */
     top: 0; /* Aligne la ligne en haut du conteneur */
     bottom: 0;
@@ -232,12 +237,12 @@ Updated: 2024-07-16 10:56:55
 
 /* Style du bouton de soumission */
 .custom-submit input[type="submit"] {
-        padding: 10px 20px;
-        background-color: #E0B9B4; /* Couleur de fond du bouton */
-        color: #fff; /* Couleur du texte */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+    padding: 10px 20px;
+    background-color: #E0B9B4; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Style des champs de formulaire */
@@ -250,23 +255,29 @@ input[type="text"], input[type="email"] {
     margin-bottom: 10px; /* Espacement entre les champs */
 }
 
+/* Style des champs de formulaire dans .custom-wrapper */
+.custom-wrapper input[type="text"],
+.custom-wrapper input[type="email"] {
+    margin-top: 13px; /* Espacement supérieur de 13px pour les champs */
+}
+
 .custom-submit input[type="submit"]:hover {
-        background-color: #005bb5; /* Couleur de fond au survol */
-    } 
-    
-    /* Assure une bonne disposition sur les petits écrans */
-    @media (max-width: 768px) {
-        .custom-columns {
-            flex-direction: column; /* Empile les colonnes verticalement sur petits écrans */
-            gap: 0; /* Supprime l'espacement entre les colonnes */
-        }
-    
-        .custom-separator {
-            display: none; /* Masque la ligne de séparation sur les petits écrans */
-        }
-    
-        .custom-submit {
-            margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
-        } 
+    background-color: #005bb5; /* Couleur de fond au survol */
+} 
+
+/* Assure une bonne disposition sur les petits écrans */
+@media (max-width: 768px) {
+    .custom-columns {
+        flex-direction: column; /* Empile les colonnes verticalement sur petits écrans */
+        gap: 0; /* Supprime l'espacement entre les colonnes */
+    }
+
+    .custom-separator {
+        display: none; /* Masque la ligne de séparation sur les petits écrans */
+    }
+
+    .custom-submit {
+        margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
+    }
 }
 </style>
